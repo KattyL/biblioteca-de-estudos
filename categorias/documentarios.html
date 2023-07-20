@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Documentários</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+        <link rel="icon" href="../Imagens/icone.png" type="image/x-icon">
+        <style>
+
+          
+          .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+  
+      .texto-input {
+        margin-left: 20px ;
+        padding-right: 300px;
+        height: 23px;
+        width: 300px;
+      }
+  
+      .botao-inserir {
+        margin-left: 10px;
+        background-color: rgb(224, 212, 212);
+        color: rgb(0, 0, 0);
+        height: 33px;
+        width: 80px;
+      }
+  
+      .botao-limpar {
+        background-color: rgb(224, 212, 212);
+        color: rgb(0, 0, 0);
+        margin-left: 1000px;
+        height: 33px;
+        width: 80px;
+      }
+  
+      .texto-salvo {
+        background-color: #dd9632b2;
+        color: #000000;
+        padding: 3px 6px;
+        text-decoration: none;
+        border-radius: 0px;
+        margin-top: 6px;
+        font-family:'tahoma', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 2px outset #b9b2b2;
+        border-top: 0px;
+        border-left: 0px;
+        margin-left: -220px;
+        font-size: 15px;
+        justify-content: space-between;
+      }
+  
+          </style>
+      </head>
+    </head>
+   
+<body> 
+    
+  <main> 
+
+    <div style="text-align: center;">
+        <img src="../Imagens/documentarios.png" alt="livro" class="img-livro">
+        <span class="titulo">Documentários</span>
+    </div>
+
+
+  </main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<nav>
+  <div class="container">
+    <input type="text" class="texto-input" placeholder="Digite um texto"Adicionar onkeydown="verificarTecla(event, this, 'listasgadocumentario')">
+    <button class="botao-inserir" onclick="salvarTexto(this, 'listasgadocumentario')">Inserir</button>
+  </div>
+  <h2>S.G.A:</h2>
+  <div class="container">
+  <ul id="listasgadocumentario"></ul>
+</div>
+  <button class="botao-limpar" onclick="limparLista('listasgadocumentario')">Limpar</button>
+  
+  <br>
+</nav>
+<br>
+<hr>
+<br>
+<nav>
+  <div class="container">
+    <input type="text" class="texto-input" placeholder="Digite um texto"Adicionar onkeydown="verificarTecla(event, this, 'listacodedocumentario')">
+    <button class="botao-inserir" onclick="salvarTexto(this, 'listacodedocumentario')">Inserir</button>
+  </div>
+  <h2>Programação:</h2>
+  <div class="container">
+  <ul id="listacodedocumentario"></ul>
+</div>
+  <button class="botao-limpar" onclick="limparLista('listacodedocumentario')">Limpar</button>
+
+  <br>
+
+</nav>
+<br>
+<hr>
+<br>
+<nav>
+  <div class="container">
+    <input type="text" class="texto-input" placeholder="Digite um texto"Adicionar onkeydown="verificarTecla(event, this, 'listaneurodocumentario')">
+    <button class="botao-inserir" onclick="salvarTexto(this, 'listaneurodocumentario')">Inserir</button>
+  </div>
+  <h2>Neurociência:</h2>
+  <div class="container">
+  <ul id="listaneurodocumentario"></ul>
+  </div>
+  <button class="botao-limpar" onclick="limparLista('listaneurodocumentario')">Limpar</button>
+  <br>
+</nav>
+<br>
+<hr>
+<br>
+<nav>
+  <div class="container">
+    <input type="text" class="texto-input" placeholder="Digite um texto"Adicionar onkeydown="verificarTecla(event, this, 'listaoutrosdocumentario')">
+    <button class="botao-inserir" onclick="salvarTexto(this, 'listaoutrosdocumentario')">Inserir</button>
+  </div>
+  <h2>Outros:</h2>
+  <div class="container">
+  <ul id="listaoutrosdocumentario"></ul>
+  </div>
+  <button class="botao-limpar" onclick="limparLista('listaoutrosdocumentario')">Limpar
+  <br>
+</nav>
+
+<script>
+  function salvarTexto(botao, idLista) {
+    var campoTexto = botao.previousElementSibling;
+    var texto = campoTexto.value;
+
+    if (texto.trim() !== "") {
+      var textosSalvos = localStorage.getItem(idLista);
+      textosSalvos = textosSalvos ? JSON.parse(textosSalvos) : [];
+
+      textosSalvos.push(texto);
+      localStorage.setItem(idLista, JSON.stringify(textosSalvos));
+
+      campoTexto.value = "";
+      exibirTextosSalvos(idLista);
+    }
+  }
+
+  function exibirTextosSalvos(idLista) {
+    var textosSalvos = localStorage.getItem(idLista);
+    textosSalvos = textosSalvos ? JSON.parse(textosSalvos) : [];
+
+    var listaTextos = document.getElementById(idLista);
+    listaTextos.innerHTML = "";
+
+    for (var i = 0; i < textosSalvos.length; i++) {
+      var textoSalvo = document.createElement("li");
+      textoSalvo.textContent = textosSalvos[i];
+      textoSalvo.classList.add("texto-salvo");
+      listaTextos.appendChild(textoSalvo);
+    }
+  }
+
+  function limparLista(idLista) {
+    localStorage.removeItem(idLista);
+    exibirTextosSalvos(idLista);
+  }
+
+  function verificarTecla(event, campoTexto, idLista) {
+    if (event.key === "Enter") {
+      salvarTexto(campoTexto.nextElementSibling, idLista);
+    }
+  }
+
+  window.onload = function() {
+    exibirTextosSalvos('listasgadocumentario');
+    exibirTextosSalvos('listacodedocumentario');
+    exibirTextosSalvos('listaneurodocumentario');
+    exibirTextosSalvos('listaoutrosdocumentario');
+  };
+</script>
+
+  
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <footer>
+      <p>&copy; 2023 Katturyn. Todos os direitos reservados.</p>
+    </footer>
+<br>
+<br>
+</body>
+</html>

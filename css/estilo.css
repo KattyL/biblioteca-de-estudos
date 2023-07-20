@@ -1,0 +1,283 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../Imagens/fundotech.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  p {
+    color: #ffffff;
+    line-height: 1.5;
+    margin-left: 16px;
+  }
+  
+@font-face {
+    font-family: "Forque";
+    font-family: "desib";
+    src: url("../fonte/Forque.ttf") format("truetype");
+    src: url("../fonte/desib.ttf") format("truetype");
+
+}
+
+  .titulo {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 300px;
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: "desib", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .titulosga {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: "desib", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .tituloprogramacao {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 150px;
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: "desib", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .tituloneuro {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 270px;
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: "desib", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .tituloquimica {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 150px;
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: "desib", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .titulonotepad {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.74);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: "desib", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+
+  }
+  .button {
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+
+h2 {
+    color:#16110e;
+    margin-left: 135px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}   
+
+a {
+  display: inline-block;
+  background-color: #dd9632b2;
+  color: #000000;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 0px;
+  margin-top: 6px;
+  font-family:'tahoma', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 2px outset #b9b2b2;
+  border-top: 0px;
+  border-left: 0px;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+
+a:hover {
+  background-color: #ebcea7;
+}
+
+a:active {
+  display: inline-block;
+  background-color: #f7e1c3;
+  color: #000000;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 0px;
+  margin-top: 6px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-weight: bold;
+  border: 3px outset #b9b2b2;
+  border-bottom: 0px;
+  border-right: 0px;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.custom-checkbox {
+  display: none; /* Esconde o checkbox padrão */
+}
+
+.custom-checkbox + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 2px outset #ccc;
+  margin-left: 50px;
+  margin-bottom: -6px;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked + label {
+  background-color: #a8d63b; /* Define a cor quando estiver marcado */
+  border-color: #7ba329; /* Define a cor da borda quando estiver marcado */
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 80px;
+}
+
+input[type="checkbox"] {
+  float: left;
+  margin-right: 10px;
+}
+
+.caixa-horizontal {
+  text-align: right;
+  margin-right: 160px;
+}
+
+.caixa-horizontal li {
+  display:inline-block;
+  list-style-type: none; 
+  margin-right: 5px;
+}
+
+.caixa-horizontal li input[type="caixinha"] {
+  margin-right: 10px;
+}
+
+.caixa-horizontal a {
+   padding: 10px;
+}
+
+.caixa-horizontal > li > a {
+  /* Estilos específicos para os elementos <a> dentro de .caixa-horizontal */
+  /* Substitua as propriedades da classe "a" aqui, caso deseje removê-las */
+  color: #000000;
+  background-color: rgba(218, 218, 44, 0.719);
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 0%;
+  margin: 0;
+  font-weight: normal;
+  border: 2px outset #ccc;
+  border-top: 0px;
+  border-left: 0px;
+  font-family:'tahoma', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  letter-spacing: 2px;
+}
+
+.caixa-horizontal > li > a:hover {
+  /* Estilos hover específicos para os elementos <a> dentro de .caixa-horizontal */
+  /* Adicione as propriedades CSS desejadas para o hover */
+  background-color: #e6e7ad;
+  color: #3b362f;
+}
+
+.caixa-horizontal > li > a:active {
+  /* Estilos específicos para os elementos <a> dentro de .caixa-horizontal */
+  /* Substitua as propriedades da classe "a" aqui, caso deseje removê-las */
+  color: #000000;
+  background-color: #f8f7ae;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 0%;
+  margin: 0;
+  font-weight: normal;
+  border: 3px outset #ccc;
+  border-bottom: 0px;
+  border-right: 0px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+ 
+}
+
+.img-livro {
+  float: left;
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 35%;
+  max-height: 35%;
+  top: -5px;
+  left: 120px;
+}
+
+

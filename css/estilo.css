@@ -1,14 +1,13 @@
 
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background-image: url(../Imagens/fundotech.png);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment:fixed;
+
   }
   
   .container {

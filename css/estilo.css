@@ -141,7 +141,7 @@ h2 {
 
 a {
   display: inline-block;
-  background-color: #dd9632b2;
+  background-color: #dd9632b4;
   color: #000000;
   padding: 10px 15px;
   text-decoration: none;
@@ -231,7 +231,7 @@ input[type="checkbox"] {
   /* Estilos específicos para os elementos <a> dentro de .caixa-horizontal */
   /* Substitua as propriedades da classe "a" aqui, caso deseje removê-las */
   color: #000000;
-  background-color: rgba(218, 218, 44, 0.719);
+  background-color: rgba(218, 218, 44, 0.671);
   padding: 20px;
   text-decoration: none;
   border-radius: 0%;

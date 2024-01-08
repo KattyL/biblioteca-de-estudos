@@ -1,0 +1,1 @@
+Biblioteca de estudos foi o primeiro projeto pessoal que desenvolvi sozinha com o propósito de colocar em prática meus conhecimentos adquiridos até então com programação Front-end, possui informações e planos de estudos que me orientam em meu cotidiano.
